@@ -40,9 +40,9 @@ trait HasEncryption
             if (empty($this->$columnKey)) continue;
 
             try {
-                $this->$key = $encrypter->$direction($this->$key);
+                $this->$columnKey = $encrypter->$direction($this->$colusmnKey);
             } catch (\Exception $e) {
-
+                \Log::error("ModelEncryptor: " . class_basename($this) . " {$direction} PK: {$this->getKey()} - {$e->getMessage()}");
             }
         }
 
