@@ -1,0 +1,27 @@
+{
+  "name": "pmingram/laravel-model-encryptor",
+  "description": "A model trait for flexible encryption and decryption of data",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "role": "developer",
+      "name": "Paul Ingram",
+      "email": "paul@pmingram.co.uk",
+      "homepage": "https://www.pmingram.co.uk/"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PmIngram\\Laravel\\ModelEncryptor\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
