@@ -28,13 +28,13 @@ trait HasEncryption
     {
         $modelEncryptionKey = $this->encryptionKey ?? '';
 
-        $saltColumn = $this->saltColumn ?? '';
+        $saltColumn = $this->encryptionSaltColumn ?? '';
         $saltData = $this->$saltColumn ?? '';
 
         $dataEncryptionKey = md5(config('app.key') . $modelEncryptionKey . $saltData);
         $encrypter = new Encrypter($dataEncryptionKey, config('app.cipher'));
 
-        $columnKeys = $this->columnKeys ?? [];
+        $columnKeys = $this->encryptionColumnKeys ?? [];
 
         foreach ($columnKeys as $columnKey) {
             if (empty($this->$columnKey)) continue;
