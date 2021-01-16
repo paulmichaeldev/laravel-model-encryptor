@@ -9,7 +9,7 @@ trait HasEncryption
     public static function bootHasEncryption()
     {
         self::creating(function ($model) {
-            $model->encrypt();
+            if ($model->encryptOnCreate === null || $model->encryptOnCreate === true) $model->encrypt();
         });
     }
 
@@ -40,7 +40,7 @@ trait HasEncryption
             if (empty($this->$columnKey)) continue;
 
             try {
-                $this->$columnKey = $encrypter->$direction($this->$colusmnKey);
+                $this->$columnKey = $encrypter->$direction($this->$columnKey);
             } catch (\Exception $e) {
                 \Log::error("ModelEncryptor: " . class_basename($this) . " {$direction} PK: {$this->getKey()} - {$e->getMessage()}");
             }
