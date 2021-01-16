@@ -2,7 +2,7 @@
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![PHP Version](https://img.shields.io/packagist/php-v/pmingram/laravel-model-encryptor.svg?style=flat-square)](https://php.net)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/pmingram/laravel-model-encryptor.svg?style=flat-square)](https://packagist.org/packages/juststeveking/laravel-api-toolkit)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/pmingram/laravel-model-encryptor.svg?style=flat-square)](https://packagist.org/packages/pmingram/laravel-model-encryptor)
 
 A model trait for flexible encryption and decryption of data
 
